@@ -1,0 +1,249 @@
+/* Add this CSS to your UserApproval.jsx file or global CSS */
+
+/* Mobile-First User Card Improvements */
+.user-card {
+    padding: 16px !important;
+    border-radius: 16px;
+}
+
+.user-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.user-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.user-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-email {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #94a3b8;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.action-btn {
+    flex: 1;
+    padding: 12px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s;
+    border: none;
+}
+
+.approve-btn {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10b981;
+}
+
+.approve-btn:hover {
+    background: rgba(16, 185, 129, 0.25);
+    transform: translateY(-2px);
+}
+
+.reject-btn {
+    background: rgba(239, 68, 68, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+.reject-btn:hover {
+    background: rgba(239, 68, 68, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Mobile Optimizations (< 480px) */
+@media (max-width: 480px) {
+    .user-card {
+        padding: 14px !important;
+    }
+
+    .user-avatar {
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 20px !important;
+    }
+
+    .user-name {
+        font-size: 16px !important;
+    }
+
+    .user-email {
+        font-size: 13px !important;
+    }
+
+    .user-badges {
+        gap: 6px !important;
+    }
+
+    .badge {
+        padding: 5px 10px !important;
+        font-size: 12px !important;
+    }
+
+    .action-buttons {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+
+    .action-btn {
+        width: 100% !important;
+        padding: 14px !important;
+    }
+}
+
+/* Tablet (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .user-card {
+        padding: 18px !important;
+    }
+
+    .action-buttons {
+        flex-direction: row !important;
+    }
+}
+
+/* Desktop (> 768px) */
+@media (min-width: 769px) {
+    .user-card {
+        padding: 20px !important;
+    }
+
+    .action-buttons {
+        flex-direction: row !important;
+    }
+}
+
+/* Filter Tabs Mobile Scroll */
+.filter-tabs-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(99, 102, 241, 0.3) rgba(255, 255, 255, 0.05);
+}
+
+.filter-tabs-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.filter-tabs-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.filter-tabs-container::-webkit-scrollbar-thumb {
+    background: rgba(99, 102, 241, 0.3);
+    border-radius: 3px;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 12px;
+    min-width: max-content;
+    padding-bottom: 8px;
+}
+
+/* Page Container Responsive Padding */
+.user-management-container {
+    min-height: 100vh;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .user-management-container {
+        padding: 16px !important;
+    }
+}
+
+/* Header Responsive */
+.page-header h1 {
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #94a3b8;
+    margin-bottom: 24px;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* Empty State */
+.empty-state {
+    padding: clamp(40px, 8vw, 80px) 20px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.empty-state h3 {
+    font-size: clamp(18px, 3vw, 24px);
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    color: #94a3b8;
+    font-size: clamp(14px, 2vw, 16px);
+}
