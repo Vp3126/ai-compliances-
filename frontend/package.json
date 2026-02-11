@@ -1,7 +1,8 @@
 {
-    "name": "slm-frontend",
+    "name": "ai-compliance-frontend",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
+    "description": "AI Compliance & Decision Review System - Frontend",
     "type": "module",
     "scripts": {
         "dev": "vite",
